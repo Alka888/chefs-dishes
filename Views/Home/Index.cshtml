@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1><a href="/">Chefs</a> | <a href="/Dishes">Dishes</a></h1>
+    <a href="/AddChefView">Add a Chef</a>
+    <h2>Check our roster of Chefs!</h2>
+	<p>__________________________________________________________________________________________________________________</p>
+	<table class="table col-sm-8 mx-auto">
+		<thead>
+			<tr>
+				<th scope="col">First Name</th>
+				<th scope="col">Last Name</th>
+				<th scope="col">Age</th>
+				<th scope="col"># of Dishes</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach(var chef in  ViewBag.allChefs)
+			{
+			<tr>
+				<td>@chef.FirstName</td>
+				<td>@chef.LastName</td>
+				<td>@chef.Age</td>
+				<td>@chef.listOfDishes.Count</td>
+			</tr>
+			}
+			 <tr>
+				<th scope="row"></th>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row"></th>
+				<td></td>
+				<td></td>
+			</tr>
+
+		</tbody>
+	</table>
+</body>
+
+</html>

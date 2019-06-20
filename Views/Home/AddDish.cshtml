@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+
+<body>
+@using chefs_dishes.Models
+@model Dish
+
+	<h1>Add a Dish!</h1>
+	<a href="/">Home</a>
+	<form asp-action="AddDish" asp-controller="Home" method="POST">
+		<div class="form-group">
+			<label asp-for="Name"> Name of Dish</label>
+			<input type="text" asp-for="Name" class="form-control">
+			<span asp-validation-for="Name"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="Calories"># of Calories</label>
+			<input type="text" asp-for="Calories" class="form-control">
+			<span asp-validation-for="Calories"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="Tastiness">Tastiness</label>
+			<input type="data" asp-for="Tastiness" class="form-control">
+			<span asp-validation-for="Tastiness"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="ChefId">Chef</label>
+			<input type="data" asp-for="ChefId" class="form-control">
+			<span asp-validation-for="ChefId"></span>
+		</div>
+		<div class="form-group">
+			<button type="submit">Add Dish!</button>
+		</div>
+	</form>
+
+</body>
+
+</html>
